@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /*  Центрирование */
+  padding: 0 20px; /*  Отступы, чтобы не прилипало к краям на меньших экранах */
+}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.header {
+  background: #fff;
+}
+
+.header .container {
+  min-height: 120px;
+  display: flex;
+  flex-direction: row;
+}
+
+.header__logo {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 350px;
+  flex-shrink: 0;
+}
+
+.header__nav {
+  padding-top: 49px;
+  padding-bottom: 51px;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+  flex-wrap: nowrap; /* ← Запрещаем перенос на новую строку */
+  white-space: nowrap; /* ← Запрещаем перенос текста внутри */
+}
+
+.header__nav-link {
+  color: rgba(69, 64, 61, 1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header__button {
+  /* Для обводки */
+  margin-top: 33px;
+  margin-bottom: 35px;
+  margin-left: 48px;
+  box-sizing: border-box;
+  border: 1px solid rgba(162, 101, 57, 1);
+  border-radius: 24px;
+  color: rgba(162, 101, 57, 1);
+  width: 169px;
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* для текста внутри */
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.top {
+  position: relative; /* Нужен для позиционирования доски и картинок */
+  background-color: #fff;
+  overflow: hidden;
+  min-height: 770px;
+  border-bottom: 3px solid black;
+}
+
+.top__board {
+  position: absolute;
+  top: 0;
+  left: 700px;
+  width: 1103px;
+  height: 689px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.top .container {
+  position: relative;
+  z-index: 1;
+}
+
+.top__wrapper {
+  max-width: 586px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: 119px;
+}
+
+.top__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.top__title {
+  color: rgba(69, 64, 61, 1);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 59px;
+  letter-spacing: 0px;
+  text-align: left;
+  max-width: 586px;
+}
+
+.top__subtitle {
+  color: rgba(69, 64, 61, 1);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+  text-align: left;
+  max-width: 459px;
+}
+
+.top__text {
+  color: rgba(69, 64, 61, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  max-width: 442px;
+}
+
+.top__button {
+  /* для обводки */
+  width: 366px;
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(162, 101, 57, 1);
+  border-radius: 24px;
+  /* для текста */
+  color: rgba(162, 101, 57, 1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  text-decoration: none;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.top__image {
+  position: absolute;
+  z-index: 2; /* Поверх доски и контента */
+  transition: transform 0.3s ease;
+}
+
+/* Позиционирование каждой картинки */
+.top__image--coffee {
+  top: 50px;
+  right: 200px;
+  width: 540px;
+  height: 540px;
+}
+
+.top__image--beans {
+  top: 30px;
+  right: 350px;
+  width: 270px;
+  height: 270px;
+}
+
+.top__image--cinnamon {
+  top: 50px;
+  right: 300px;
+  width: 570px;
+  height: 570px;
+}
+
+.top__image--cookie {
+  top: 30px;
+  right: 100px;
+  width: 394px;
+  height: 394px;
+}
+
+.top__image--coffee:hover,
+.top__image--cinnamon:hover,
+.top__image--cookie:hover {
+  transform: rotate(-10.44deg);
+}
