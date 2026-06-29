@@ -5,33 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Zernyshko</title>
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <a class="header__logo" href="index.html"
-          ><img src="image/logo.png" alt="Логотип"
-        /></a>
+        <a class="header__logo" href="index.html"><img src="image/logo.png" alt="Логотип"/></a>
         <nav class="header__nav">
           <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a href="#about" class="header__nav-link">О нас</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#about" class="header__nav-link">Меню</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#about" class="header__nav-link">Отзывы</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#about" class="header__nav-link">Контакты</a>
-            </li>
+            <li class="header__nav-item"><a href="#about" class="header__nav-link">О нас</a></li>
+            <li class="header__nav-item"><a href="#menu" class="header__nav-link">Меню</a></li>
+            <li class="header__nav-item"><a href="#reviews" class="header__nav-link">Отзывы</a></li>
+            <li class="header__nav-item"><a href="#contacts" class="header__nav-link">Контакты</a></li>
           </ul>
         </nav>
-        <a href="" class="btn header__button">Связаться</a>
+        <a class="btn header__button" href="#contacts">Связаться</a>
       </div>
     </header>
     <section class="top">
@@ -53,7 +46,7 @@
               которых захочется возвращаться снова и снова.
             </p>
           </div>
-          <a class="btn top__button" href="">Посмотреть меню</a>
+          <a class="btn top__button" href="#menu">Посмотреть меню</a>
         </div>
         <img
           class="top__image top__image--coffee"
@@ -77,5 +70,413 @@
         />
       </div>
     </section>
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="about__title">О нас</h2>
+        <div class="about__grid">
+          <div class="about__card">
+            <div class="about__image-wrapper">
+              <img class="about__image" src="image/history.jpg" alt="История" />
+            </div>
+            <div class="about__content">
+              <h3 class="about__content-name">История</h3>
+              <p class="about__content-text">
+                «Зернышко» — кофейня, которая родилась из любви к хорошему кофе
+                и желания создать место уюта для каждого. <br /><br />
+                Открытая в 2020 году, кофейня быстро стала любимой как для
+                ценителей кофе, так и для тех, кто просто ищет спокойное место
+                для отдыха.
+              </p>
+            </div>
+          </div>
+          <div class="about__card">
+            <div class="about__image-wrapper">
+              <img class="about__image" src="image/philosophy.jpg" alt="Философия"/>
+            </div>
+            <div class="about__content">
+              <h3 class="about__content-name">Философия</h3>
+              <p class="about__content-text">
+                Мы верим, что каждая чашка кофе — это особый момент.
+                <br /><br />
+                Стремимся создать теплую дружелюбную атмосферу, где каждый гость
+                чувствует себя как дома. <br /><br />
+                Наши бариста с заботой подходят к каждому заказу, создавая
+                напитки с любовью и вниманием к деталям.
+              </p>
+            </div>
+          </div>
+          <div class="about__card">
+            <div class="about__image-wrapper">
+              <img class="about__image" src="image/svezheye-zerno.jpg" alt="Свежее зерно"/>
+            </div>
+            <div class="about__content">
+              <h3 class="about__content-name">Свежее зерно</h3>
+              <p class="about__content-text">
+                Мы используем только свежие зерна и экспериментируем с
+                оригинальными рецептами, чтобы радовать гостей уникальными
+                вкусами. <br /><br />
+                Наша команда сотрудничает с локальными обжарщиками, поддерживая
+                высокое качество и разнообразие.
+              </p>
+            </div>
+          </div>
+          <div class="about__card">
+            <div class="about__image-wrapper">
+              <img class="about__image" src="image/zabota-o-prirode.jpg" alt="Забота о природе"/>
+            </div>
+            <div class="about__content">
+              <h3 class="about__content-name">Забота о природе</h3>
+              <p class="about__content-text">
+                Мы стараемся уменьшить экологический след, используя
+                биоразлагаемые стаканчики и предлагая скидки для тех, кто
+                приходит со своей чашкой. <br /><br />
+                Мы заботимся не только о клиентах, но и о планете.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="menu__header">
+          <h2 class="menu__title">Меню</h2>
+          <div class="menu__tabs">
+            <button class="menu__tab menu__tab--active">Кофе</button>
+            <button class="menu__tab">Десерты</button>
+            <button class="menu__tab">Закуски</button>
+          </div>
+        </div>
+        <div class="menu__grid">
+          <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/coffee-1.png" alt="Кофе" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">240₽</span>
+              <p class="menu__content-text">
+                Капучино на миндальном молоке с кокосовым сиропом
+              </p>
+              <span class="menu__content-volume">350 мл</span>
+            </div>
+          </article>
+          <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/coffee-2.png" alt="Кофе" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">270₽</span>
+              <p class="menu__content-text">
+                Латте на кокосовом молоке с кленовым сиропом
+              </p>
+              <span class="menu__content-volume">350 мл</span>
+            </div>
+          </article>
+          <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/coffee-3.png" alt="Кофе" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">360₽</span>
+              <p class="menu__content-text">
+                Раф с карамельным сиропом и шоколадом
+              </p>
+              <span class="menu__content-volume">250 мл</span>
+            </div>
+          </article>
+          <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/coffee-4.png" alt="Кофе" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">160₽</span>
+              <p class="menu__content-text">
+                Классический американо с зарядом бодрости
+              </p>
+              <span class="menu__content-volume">300 мл</span>
+            </div>
+          </article>
+          <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/coffee-5.png" alt="Кофе" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">160₽</span>
+              <p class="menu__content-text">
+                Флет уайт с насыщенным вкусом эфиопского эспрессо
+              </p>
+              <span class="menu__content-volume">300 мл</span>
+            </div>
+          </article>
+          <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/coffee-6.png" alt="Кофе" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">270₽</span>
+              <p class="menu__content-text">
+                Латте на овсяном молоке  с добавлением корицы
+              </p>
+              <span class="menu__content-volume">300 мл</span>
+            </div>
+          </article>
+          <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/coffee-7.png" alt="Кофе" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">180₽</span>
+              <p class="menu__content-text">
+                Двойной эспрессо с высоким зарядом энергии
+              </p>
+              <span class="menu__content-volume">300 мл</span>
+            </div>
+          </article>
+          <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/coffee-8.png" alt="Кофе" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">240₽</span>
+              <p class="menu__content-text">
+                Капучино на соевом молоке с ореховым сиропом
+              </p>
+              <span class="menu__content-volume">300 мл</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__grid">
+          <div class="reviews__card">
+            <div class="reviews__top">
+              <img
+                class="reviews__image"
+                src="image/avatar-1.png"
+                alt="Аватарка"
+              />
+              <div class="reviews__info">
+                <h3 class="rewiews__name">Ирина</h3>
+                <div class="reviews__stars">
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              Очень уютное место! Всегда чувствуешь себя желанным гостем, а ваши
+              бариста <br />
+              не только готовят отличный и вкусный кофе, но и могут подсказать
+              что-то новенькое попробовать.
+            </p>
+          </div>
+          <div class="reviews__card">
+            <div class="reviews__top">
+              <img
+                class="reviews__image"
+                src="image/avatar-2.png"
+                alt="Аватарка"
+              />
+              <div class="reviews__info">
+                <h3 class="rewiews__name">Игорь</h3>
+                <div class="reviews__stars">
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              Я настоящий кофеман, и «Зернышко» удивило меня качеством! Здесь
+              всегда свежие зерна и интересные рецепты — каждый раз нахожу новый
+              вкус для себя. Рекомендую всем своим друзьям.
+            </p>
+          </div>
+          <div class="reviews__card">
+            <div class="reviews__top">
+              <img
+                class="reviews__image"
+                src="image/avatar-3.png"
+                alt="Аватарка"
+              />
+              <div class="reviews__info">
+                <h3 class="rewiews__name">Александр</h3>
+                <div class="reviews__stars">
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              Приятно видеть, что кофейня заботится о природе. Экологичная
+              упаковка, скидка <br />
+              за свою чашку — такие мелочи, а настро-ение поднимают! Приятно,
+              что здесь думают о планете.
+            </p>
+          </div>
+          <div class="reviews__card">
+            <div class="reviews__top">
+              <img
+                class="reviews__image"
+                src="image/avatar-4.png"
+                alt="Аватарка"
+              />
+              <div class="reviews__info">
+                <h3 class="rewiews__name">Эльза</h3>
+                <div class="reviews__stars">
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              В «Зернышке» особенная атмосфера: уютно, стильно и спокойно.
+              Идеальное место, чтобы сбежать от городской суеты, почитать книгу
+              или просто расслабиться за чашкой кофе.
+            </p>
+          </div>
+          <div class="reviews__card">
+            <div class="reviews__top">
+              <img
+                class="reviews__image"
+                src="image/avatar-5.png"
+                alt="Аватарка"
+              />
+              <div class="reviews__info">
+                <h3 class="rewiews__name">Андрей</h3>
+                <div class="reviews__stars">
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              Бариста всегда приветливые и открытые к общению. Люблю, когда
+              заходишь, и тебя встречают с улыбкой и вниманием <br />
+              к деталям. Кажется, что здесь всех знают по имени и каждому рады.
+            </p>
+          </div>
+          <div class="reviews__card">
+            <div class="reviews__top">
+              <img
+                class="reviews__image"
+                src="image/avatar-6.png"
+                alt="Аватарка"
+              />
+              <div class="reviews__info">
+                <h3 class="rewiews__name">Кристина</h3>
+                <div class="reviews__stars">
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                  <img src="image/Star.svg" alt="Звезда" />
+                </div>
+              </div>
+            </div>
+            <p class="reviews__text">
+              Каждая чашка кофе в «Зернышке» словно маленький шедевр. Ощущается
+              внимание <br />
+              к мелочам — от аромата до оформления напитка. Это то место, куда
+              хочется возвращаться снова и снова.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <h2 class="contacts__title">Как нас найти</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__left">
+            <div class="contacts__info">
+              <h3 class="contacts__subtitle">Контакты</h3>
+              <div class="contacts__links">
+                <a class="contacts__link contacts__link--phone" href="tel:++79999999999">+7 (999) 999 99-99</a>
+                <a class="contacts__link contacts__link--email" href="mailto:zernyshko@mail.ru">zernyshko@mail.ru</a>
+                <a class="contacts__link contacts__link--location" href="https://maps.google.com/?q=СПб, Коржекова, 5" target="_blank">СПб, ул. Коржекова, 5</a>
+              </div>
+            </div>
+            <div class="contacts__form">
+              <h3 class="contacts__subtitle">Бронирование</h3>
+              <form class="contacts__form-body" action="#" method="POST" onsubmit="alert('Спасибо! Мы свяжемся с вами.'); return false;">
+                <div class="contacts__inputs">
+                  <input
+                    class="contacts__input"
+                    type="text"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                  <input
+                    class="contacts__input"
+                    type="tel"
+                    placeholder="Ваш номер телефона"
+                    required
+                  />
+                  <input
+                    class="contacts__input"
+                    type="text"
+                    placeholder="Комментарий"
+                  />
+                </div>
+                <button class="btn contacts__button" type="submit">
+                  Забронировать
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <div class="contacts__map">
+              <script
+                type="text/javascript"
+                charset="utf-8"
+                async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8ac5b6c492f932a5577ad595510d6d4505f4a5e442046c6b186b795f5893d533
+                &amp;width=762&amp;height=521&amp;lang=ru_RU&amp;scroll=true"
+              ></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__left">
+          <a href="index.html"><img src="image/logo.png" alt="Логотип" /></a>
+          <p class="footer__copy">© 2025 Все права защищены</p>
+        </div>
+        <div class="footer__right">
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a href="#about" class="footer__nav-link">О нас</a></li>
+              <li class="footer__nav-item"><a href="#menu" class="footer__nav-link">Меню</a></li>
+              <li class="footer__nav-item"><a href="#reviews" class="footer__nav-link">Отзывы</a></li>
+              <li class="footer__nav-item"><a href="#contacts" class="footer__nav-link">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer__socials">
+            <a class="footer__social-link" href="https://vk.com"><img src="image/icon-vk.svg" alt="ВК"/></a>
+            <a class="footer__social-link" href="https://www.instagram.com"><img src="image/icon-insta.svg" alt="Инстаграм"/></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
