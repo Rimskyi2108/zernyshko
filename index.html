@@ -14,19 +14,44 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <a class="header__logo" href="index.html"><img src="image/logo.png" alt="Логотип"/></a>
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item"><a href="#about" class="header__nav-link">О нас</a></li>
-            <li class="header__nav-item"><a href="#menu" class="header__nav-link">Меню</a></li>
-            <li class="header__nav-item"><a href="#reviews" class="header__nav-link">Отзывы</a></li>
-            <li class="header__nav-item"><a href="#contacts" class="header__nav-link">Контакты</a></li>
-          </ul>
-        </nav>
-        <a class="btn header__button" href="#contacts">Связаться</a>
-      </div>
-    </header>
+  <div class="container">
+    <a class="header__logo" href="index.html"><img src="image/logo.png" alt="Логотип"/></a>
+    <!-- Десктопная навигация -->
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="#about" class="header__nav-link">О нас</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#menu" class="header__nav-link">Меню</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#reviews" class="header__nav-link">Отзывы</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#contacts" class="header__nav-link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="btn header__button" href="#contacts">Связаться</a>
+    <!-- БУРГЕР -->
+    <button class="header__burger" id="burgerBtn" aria-label="Меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+  <!-- ОВЕРЛЕЙ и МОБИЛЬНОЕ МЕНЮ (после .container, но внутри <header>) -->
+  <div class="header__overlay" id="overlay"></div>
+  <nav class="header__mobile-nav" id="mobileNav">
+    <ul class="header__mobile-list">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#menu">Меню</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
     <section class="top">
       <img class="top__board" src="image/top-board.png" alt="Доска" />
       <div class="container">
@@ -147,8 +172,9 @@
             <button class="menu__tab">Закуски</button>
           </div>
         </div>
-        <div class="menu__grid">
-          <article class="menu__card">
+        <div class="menu__group menu__group--active" id="coffee">
+          <div class="menu__grid">
+            <article class="menu__card">
             <div class="menu__image-bg">
               <img class="menu__image" src="image/coffee-1.png" alt="Кофе" />
             </div>
@@ -159,8 +185,8 @@
               </p>
               <span class="menu__content-volume">350 мл</span>
             </div>
-          </article>
-          <article class="menu__card">
+            </article>
+            <article class="menu__card">
             <div class="menu__image-bg">
               <img class="menu__image" src="image/coffee-2.png" alt="Кофе" />
             </div>
@@ -171,8 +197,8 @@
               </p>
               <span class="menu__content-volume">350 мл</span>
             </div>
-          </article>
-          <article class="menu__card">
+            </article>
+            <article class="menu__card">
             <div class="menu__image-bg">
               <img class="menu__image" src="image/coffee-3.png" alt="Кофе" />
             </div>
@@ -183,8 +209,8 @@
               </p>
               <span class="menu__content-volume">250 мл</span>
             </div>
-          </article>
-          <article class="menu__card">
+            </article>
+            <article class="menu__card">
             <div class="menu__image-bg">
               <img class="menu__image" src="image/coffee-4.png" alt="Кофе" />
             </div>
@@ -195,8 +221,8 @@
               </p>
               <span class="menu__content-volume">300 мл</span>
             </div>
-          </article>
-          <article class="menu__card">
+            </article>
+            <article class="menu__card">
             <div class="menu__image-bg">
               <img class="menu__image" src="image/coffee-5.png" alt="Кофе" />
             </div>
@@ -207,20 +233,20 @@
               </p>
               <span class="menu__content-volume">300 мл</span>
             </div>
-          </article>
-          <article class="menu__card">
+            </article>
+            <article class="menu__card">
             <div class="menu__image-bg">
               <img class="menu__image" src="image/coffee-6.png" alt="Кофе" />
             </div>
             <div class="menu__content">
               <span class="menu__content-price">270₽</span>
               <p class="menu__content-text">
-                Латте на овсяном молоке  с добавлением корицы
+                Латте на овсяном молоке с добавлением корицы
               </p>
               <span class="menu__content-volume">300 мл</span>
             </div>
-          </article>
-          <article class="menu__card">
+            </article>
+            <article class="menu__card">
             <div class="menu__image-bg">
               <img class="menu__image" src="image/coffee-7.png" alt="Кофе" />
             </div>
@@ -231,8 +257,8 @@
               </p>
               <span class="menu__content-volume">300 мл</span>
             </div>
-          </article>
-          <article class="menu__card">
+            </article>
+            <article class="menu__card">
             <div class="menu__image-bg">
               <img class="menu__image" src="image/coffee-8.png" alt="Кофе" />
             </div>
@@ -243,7 +269,208 @@
               </p>
               <span class="menu__content-volume">300 мл</span>
             </div>
-          </article>
+            </article>
+          </div>
+        </div>
+        <div class="menu__group" id="desserts">
+          <div class="menu__grid">
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/desserts-1.png" alt="Десерты" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">240₽</span>
+              <p class="menu__content-text">
+                Синабон с ароматной корицей и глазурью
+              </p>
+              <span class="menu__content-volume">250 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/desserts-2.png" alt="Десерты" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">270₽</span>
+              <p class="menu__content-text">
+                Воздушная датская слойка с нежным кремом
+              </p>
+              <span class="menu__content-volume">250 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/desserts-3.png" alt="Десерты" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">360₽</span>
+              <p class="menu__content-text">
+                Нежный крем-брюле с ягодами и карамельной корочкой 
+              </p>
+              <span class="menu__content-volume">150 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/desserts-4.png" alt="Десерты" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">270₽</span>
+              <p class="menu__content-text">
+                Улитка с яблочно-лимонным джемом и изюмом
+              </p>
+              <span class="menu__content-volume">250 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/desserts-5.png" alt="Десерты" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">160₽</span>
+              <p class="menu__content-text">
+                Шоколадно-кофейный торт с глубоким вкусом какао
+              </p>
+              <span class="menu__content-volume">170 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/desserts-6.png" alt="Десерты" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">180₽</span>
+              <p class="menu__content-text">
+                Шоколадная тарталетка с кремом и  малиной
+              </p>
+              <span class="menu__content-volume">150 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/desserts-7.png" alt="Десерты" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">240₽</span>
+              <p class="menu__content-text">
+                Классический медовик со сливочным кремом
+              </p>
+              <span class="menu__content-volume">250 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/desserts-8.png" alt="Десерты" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">160₽</span>
+              <p class="menu__content-text">
+                Торт с нежным кремом, корицей и шоколадом
+              </p>
+              <span class="menu__content-volume">300 гр</span>
+            </div>
+            </article>
+          </div>
+        </div>
+        <div class="menu__group" id="snacks">
+          <div class="menu__grid">
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/snacks-1.png" alt="Закуски" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">240₽</span>
+              <p class="menu__content-text">
+               Миндаль — идеальная закуска для перекуса
+              </p>
+              <span class="menu__content-volume">200 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/snacks-2.png" alt="Закуски" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">360₽</span>
+              <p class="menu__content-text">
+                Классическое печенье с кусочками шоколада
+              </p>
+              <span class="menu__content-volume">250 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/snacks-3.png" alt="Закуски" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">270₽</span>
+              <p class="menu__content-text">
+                Баранки с легкой солью — отличное дополнение к кофе
+              </p>
+              <span class="menu__content-volume">350 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/snacks-4.png" alt="Закуски" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">160₽</span>
+              <p class="menu__content-text">
+                Булочка с маком, покрытая нежной сахарной глазурью
+              </p>
+              <span class="menu__content-volume">150 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/snacks-5.png" alt="Закуски" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">270₽</span>
+              <p class="menu__content-text">
+                Свежий, хрустящий кешью — полезный перекус
+              </p>
+              <span class="menu__content-volume">300 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/snacks-6.png" alt="Закуски" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">160₽</span>
+              <p class="menu__content-text">
+                Мягкое печенье с начинкой из шоколада 
+              </p>
+              <span class="menu__content-volume">150 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/snacks-7.png" alt="Закуски" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">180₽</span>
+              <p class="menu__content-text">
+                Нежные панкейки с сладким медом и маслом
+              </p>
+              <span class="menu__content-volume">300 гр</span>
+            </div>
+            </article>
+            <article class="menu__card">
+            <div class="menu__image-bg">
+              <img class="menu__image" src="image/snacks-8.png" alt="Закуски" />
+            </div>
+            <div class="menu__content">
+              <span class="menu__content-price">240₽</span>
+              <p class="menu__content-text">
+                Сытные треугольники с сырной начинкой
+              </p>
+              <span class="menu__content-volume">250 гр</span>
+            </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -478,5 +705,70 @@
         </div>
       </div>
     </footer>
+    <script>
+    // 1. Находим все табы и все группы
+    const tabs = document.querySelectorAll('.menu__tab');
+    const groups = document.querySelectorAll('.menu__group');
+
+    // 2. Карта соответствия (русский текст → английский id)
+    const tabMap = {
+      'Кофе': 'coffee',
+      'Десерты': 'desserts',
+      'Закуски': 'snacks'
+    };
+
+    // 3. Для каждой кнопки вешаем обработчик клика
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+
+        // 3.1 Убираем активный класс у всех кнопок
+        tabs.forEach(t => t.classList.remove('menu__tab--active'));
+        
+        // 3.2 Добавляем активный класс текущей кнопке
+        this.classList.add('menu__tab--active');
+        
+        // 3.3 Убираем активный класс у всех групп
+        groups.forEach(g => g.classList.remove('menu__group--active'));
+        
+        // 3.4 Находим нужный id через карту соответствия
+        const tabName = this.textContent.trim();
+        const targetId = tabMap[tabName];
+        const targetGroup = document.getElementById(targetId);
+        
+        // 3.5 Если группа найдена — показываем её
+        if (targetGroup) {
+          targetGroup.classList.add('menu__group--active');
+        }
+      });
+    });
+  
+    // БУРГЕР МЕНЮ В ХЕДЕРЕ
+    const burger = document.getElementById('burgerBtn');
+const overlay = document.getElementById('overlay');
+const mobileNav = document.getElementById('mobileNav');
+
+// Открытие/закрытие
+burger.addEventListener('click', function() {
+  this.classList.toggle('active');
+  overlay.classList.toggle('active');
+  mobileNav.classList.toggle('active');
+});
+
+// Закрытие по клику на ссылку
+document.querySelectorAll('.header__mobile-list a').forEach(link => {
+  link.addEventListener('click', () => {
+    burger.classList.remove('active');
+    overlay.classList.remove('active');
+    mobileNav.classList.remove('active');
+  });
+});
+
+// Закрытие по клику на оверлей
+overlay.addEventListener('click', () => {
+  burger.classList.remove('active');
+  overlay.classList.remove('active');
+  mobileNav.classList.remove('active');
+});
+  </script>
   </body>
 </html>
